@@ -829,7 +829,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('./images/hero_image_768px.jpg');
+      url('../images/hero_image_768px.jpg');
     padding: 112px 0px;
   }
 
@@ -974,7 +974,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('./images/hero_image_1158px.jpg');
+      url('../images/hero_image_1158px.jpg');
     padding: 188px 0px;
   }
 
@@ -1020,7 +1020,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('./images/hero_image@2x.jpg');
+      url('../images/hero_image@2x.jpg');
   }
 }
 
@@ -1032,7 +1032,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('./images/hero_image_768px@2x.jpg');
+      url('../images/hero_image_768px@2x.jpg');
   }
 }
 
@@ -1044,7 +1044,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('./images/hero_image_1158px@2x.jpg');
+      url('../images/hero_image_1158px@2x.jpg');
   }
 }
 
