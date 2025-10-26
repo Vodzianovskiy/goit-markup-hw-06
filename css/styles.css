@@ -51,8 +51,8 @@ img {
 /* CONTAINER & VISUALLY-HIDDEN: Layout utilities */
 .container {
   max-width: 320px;
-  margin: auto;
-  padding: 16px 16px;
+  margin: 0 auto;
+  padding: 0px 16px;
 }
 
 .visually-hidden {
@@ -79,6 +79,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 16px;
 }
 
 .menu-nav {
@@ -286,11 +287,13 @@ img {
 .team-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 72px;
 }
 
 .team-card {
-  margin: 0 auto;
+  max-width: 264px;
   background-color: var(--white);
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -298,7 +301,7 @@ img {
 }
 
 .team-card-content {
-  padding: 32px 0;
+  padding: 32px 16px;
   text-align: center;
 }
 
@@ -351,10 +354,6 @@ img {
   display: flex;
   flex-direction: column;
   row-gap: 48px;
-}
-
-.portfolio-list li {
-  flex-basis: calc((100% - 48px) / 3);
 }
 
 .portfolio-item {
@@ -418,11 +417,8 @@ img {
 /* ========== FOOTER STYLES ========== */
 .site-footer {
   background-color: var(--navy-blue);
-  padding: 96px 0;
   min-width: 320px;
-}
-
-.site-footer .container {
+  padding: 96px 0px;
 }
 
 .site-footer .logo {
@@ -443,14 +439,13 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cloud);
-  margin-bottom: 72px;
 }
 
 .footer-left {
+  margin-bottom: 72px;
 }
 
 .footer-social {
-  margin: 0px auto;
   margin-bottom: 72px;
 }
 
@@ -523,6 +518,10 @@ img {
   gap: 24px;
 }
 
+.footer-subscribe-label {
+  display: flex;
+  margin-bottom: 16px;
+}
 .footer-subscribe-input {
   width: 288px;
   height: 40px;
@@ -538,7 +537,6 @@ img {
   outline: none;
   display: flex;
   margin: auto;
-  margin-bottom: 16px;
 }
 
 .footer-subscribe-input::placeholder {
@@ -812,8 +810,12 @@ img {
   .burger {
     display: none;
   }
+  .site-header .container {
+    padding: 0px 16px;
+  }
+
   .container {
-    max-width: 1440px;
+    max-width: 1158px;
     padding: 0px 16px;
   }
 
@@ -839,27 +841,22 @@ img {
     margin: 0 auto 36px;
   }
 
-  .team-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 108px;
-    gap: 24px;
-    row-gap: 64px;
-  }
   .portfolio-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     row-gap: 72px;
-    margin: 108px;
+    padding: 0;
+    max-width: calc(2 * 356px + 24px);
+    justify-content: center;
   }
   .site-footer .container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 108px;
+    padding: 0px;
   }
   .site-footer {
-    min-width: 768px;
+    padding-left: 108px;
   }
 
   .site-footer .logo {
@@ -876,7 +873,6 @@ img {
 
   .footer-text {
     max-width: 264px;
-    margin-right: 24px;
   }
 
   .footer-subscribe-title {
@@ -923,9 +919,44 @@ img {
   .advantage-item {
     max-width: 356px;
   }
+  .team-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    row-gap: 72px;
+    padding: 0;
+    margin: 0 auto;
+    max-width: calc(2 * 264px + 24px);
+    justify-content: center;
+  }
+  .footer-left {
+    margin-right: 24px;
+  }
 }
 
 @media only screen and (min-width: 1158px) {
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+  .advantage-text {
+    font-weight: 500;
+  }
+  .advantage-title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .site-footer .container {
+    padding: 0px 16px;
+  }
+  .footer-left {
+    margin-bottom: 0px;
+  }
+  .footer-left {
+    margin-right: 120px;
+  }
   .contacts-list {
     display: flex;
     flex-direction: row;
@@ -937,9 +968,6 @@ img {
   }
   .contact-link {
     font-size: 16px;
-  }
-  .contacts-info {
-    margin-right: 156px;
   }
 
   .advantages-list {
@@ -958,16 +986,14 @@ img {
   .section {
     padding: 120px 0px;
   }
-  .team-list {
-    display: flex;
-    flex-direction: row;
-  }
   .portfolio-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
     gap: 24px;
-    row-gap: 40px;
+    row-gap: 48px;
+    padding: 0;
+    max-width: calc(3 * 360px + 24px);
+    justify-content: center;
   }
   .hero-section {
     background-image: linear-gradient(
@@ -982,9 +1008,6 @@ img {
     padding: 100px 0px;
   }
 
-  .footer-text {
-    margin-right: 120px;
-  }
   .footer-social {
     margin-right: 80px;
   }
@@ -992,9 +1015,6 @@ img {
   .site-footer .logo {
     margin: auto;
     margin-bottom: 16px;
-  }
-  .footer-text {
-    margin: 0px 120px 0px 0px;
   }
 
   .footer-subscribe-input {
@@ -1088,22 +1108,27 @@ img {
 }
 
 .modal-backdrop-mob .container {
-  padding: 0px 16px;
+  width: 100%;
+  height: 100%;
+  padding: 72px 24px 40px 16px;
 }
 
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
 .mobile-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 168px;
-  margin-top: 72px;
 }
 
 .mobile-contacts-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-bottom: 49px;
 }
 
 .soscial {
@@ -1137,6 +1162,7 @@ img {
 
 .mobile-contacts-info {
   font-style: normal;
+  margin-bottom: 49px;
 }
 .mobile-button {
   font-weight: 700;
